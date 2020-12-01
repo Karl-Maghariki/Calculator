@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1f1f1f;
+}
+
+span {
+    margin-bottom: 0px;
+}
+
+.col {
+    width: 25%;
+    padding: 25px;
+    text-align: center;
+    margin: 1px;
+    font-size: 16px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 1px;
+}
+
+.flex-container > div {
+    width: 100%;
+    margin: 0 14px;
+    padding: 6px;
+    text-align: center;
+}
+
+.dark {
+    color: #343434;
+}
+
+.row {
+    display: flex;
+}
+
+.table {
+    max-width: 400px;
+    width: 100%;
+}
+
+.calculator { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   /*viewport height*/
+}
+
+#result {
+    display: block;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 5px;
+}
+
+.equal {
+    background-color: #6f1921;
+}
+
+.read {
+    text-align: right;
+}
+
+.black {
+    background-color: #060606;
+}
+
+.col:hover {       
+    background: #343434;    
+    cursor: pointer;
+    box-shadow: 0 0 10px #343434, 0 0 10px #343434, 0 0 10px #343434;
+}
+
+.equal:hover,
+.equal:active {
+    background-color: #d71424;
+    cursor: pointer;
+}
+
+.light:hover, 
+.light:active {
+    cursor: pointer;
+    background-color: #343434;
+}
+
+
+.symbols {
+    background-color: #131313;
+    font-size: 20px;
+}
+
+.left {
+    margin-left: 0px;
+}
+
+.bottom {
+    margin-bottom: 0px;
+}
+
+.right {
+    margin-right: 0px;
+}
+ 
+.top {
+    margin-top: 2px;
+}
+
