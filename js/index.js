@@ -83,6 +83,3 @@ function displayHistoryValue() {
 function displayCurrentValue() {
   document.getElementById('result').innerText = currentValue;
 }
-
-
- 
