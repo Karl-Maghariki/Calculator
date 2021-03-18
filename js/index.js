@@ -81,5 +81,5 @@ function displayHistoryValue() {
 }
 
 function displayCurrentValue() {
-  document.getElementById('result').innerText = currentValue;
+  document.getElementById('result').innerText = currentValue.toLocaleString()
 }
