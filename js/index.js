@@ -118,26 +118,26 @@ function changeColorLight() {
 
 function changeColorBlue() {
   for (i = 0; i < 11; i++) {
-    document.getElementsByClassName("symbols")[i].style.backgroundColor = "#3c68ab";
+    document.getElementsByClassName("symbols")[i].style.backgroundColor = "black";
   }
   for (i = 0; i < 12; i++) {
-    document.getElementsByClassName("black")[i].style.backgroundColor = "#486187";
+    document.getElementsByClassName("black")[i].style.backgroundColor = "gold";
   }
-  document.getElementsByClassName("equal")[0].style.backgroundColor = "#2068d6";
-  document.body.style.backgroundColor = '#567eba';
+  document.getElementsByClassName("equal")[0].style.backgroundColor = "blue";
+  document.body.style.backgroundColor = 'cornflowerblue';
   document.body.style.color = "#fff"
   document.querySelector("#result").style.color = "#fff"
 } 
 
 function changeColorRed() {
   for (i = 0; i < 11; i++) {
-    document.getElementsByClassName("symbols")[i].style.backgroundColor = "#c73847";
+    document.getElementsByClassName("symbols")[i].style.backgroundColor = "orange";
   }
   for (i = 0; i < 12; i++) {
-    document.getElementsByClassName("black")[i].style.backgroundColor = "#ad3b46";
+    document.getElementsByClassName("black")[i].style.backgroundColor = "khaki";
   }
-  document.getElementsByClassName("equal")[0].style.backgroundColor = "#9e2632";
-  document.body.style.backgroundColor = '#99434c';
+  document.getElementsByClassName("equal")[0].style.backgroundColor = "red";
+  document.body.style.backgroundColor = 'darkorange';
   document.body.style.color = "#fff"
   document.querySelector("#result").style.color = "#fff"
 } 
