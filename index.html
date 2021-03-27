@@ -55,11 +55,17 @@
           <div class="row six">
            <div class="col black left">+/-</div>
            <div onclick="concatRight(0)" class="col black bottom">0</div>
-           <div onclick="concatRight('.')"class="col black bottom">.</div>
+           <div id="dot" onclick="concatRight('.')"class="col black bottom">.</div>
            <div onclick="final()" class="col equal bottom right">=</div>
           </div> 
         </div>
-     </div>  
+        <div id="colorChooser">
+          <div style="background-color: #000;" class="colorTheme dark"></div>
+          <div style="background-color: #fff;" class="colorTheme light"></div>
+          <div style="background-color: blue;" class="colorTheme blue"></div>
+          <div style="background-color: red;" class="colorTheme red"></div>
+        </div>
+      </div>  
     </div>  
   </body>
   <script src="js/index.js"></script>
