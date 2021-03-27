@@ -134,5 +134,11 @@ span {
 
 #colorChooser div {
     margin: 20px 0;
-    border: 1px solid #000;
+    cursor: pointer;    
+    border: 1px solid black;
+}
+
+#colorChooser img {
+    margin: 20px 0;
+    cursor: pointer;  
 }
