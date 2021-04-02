@@ -5,12 +5,6 @@ let historyValue = undefined;
 // Initialisation
 displayCurrentValue()
 
-// giving functions
-document.getElementsByClassName("colorTheme")[0].addEventListener("click", changeColorDark)
-document.getElementsByClassName("colorTheme")[1].addEventListener("click", changeColorLight)
-document.getElementsByClassName("colorTheme")[2].addEventListener("click", changeColorBlue)
-document.getElementsByClassName("colorTheme")[3].addEventListener("click", changeColorRed)
-
 //user Chooses First Number 
 function concatRight(chr) {
   const chrString = chr.toString()
@@ -83,61 +77,71 @@ function final() {
 }
 
 function displayHistoryValue() {
-  document.getElementById('history').innerText = historyValue;
+  $("#history").text(historyValue)
 }
 
 function displayCurrentValue() {
-  document.getElementById('result').innerText = currentValue;
+  $("#result").text(currentValue)
 }
 
-function changeColorDark() {
+$(".colorTheme:first").click(function(){
   for (i = 0; i < 11;i++) {
-    document.getElementsByClassName("symbols")[i].style.backgroundColor = "#131313";
+    $('.symbols')[i].css('backgroundColor', "#131313")
   }
   for (i = 0; i < 12; i++) {
-    document.getElementsByClassName("black")[i].style.backgroundColor = "#060606";
+    $(".black")[i].css("backgroundColor", "#060606")
   }
-  document.getElementsByClassName("equal")[0].style.backgroundColor = "#6f1921";
-  document.body.style.backgroundColor = '#1f1f1f';
-  document.body.style.color = "#fff"
-  document.querySelector("#result").style.color = "#fff"
-} 
-
-function changeColorLight() {
+  $(".equal:first").css('backgroundColor', '#6f1921')
+  $(document.body).css({
+    "backgroundColor": "#1f1f1f",
+     "color": "#fff"
+    })
+  $("#result").css("color", "#fff")
+})
+  
+$(".colorTheme")[1].click(function(){
   for (i = 0; i < 11;i++) {
-    document.getElementsByClassName("symbols")[i].style.backgroundColor = "dimgrey";
+    $(".symbols")[i].css("backgroundColor", "dimgrey")
   }
   for (i = 0; i < 12; i++) {
-    document.getElementsByClassName("black")[i].style.backgroundColor = "gray";
+    $(".black")[i].css("backgroundColor", "gray")
   }
-  document.getElementsByClassName("equal")[0].style.backgroundColor = "red";
-  document.body.style.backgroundColor = '#fff';
-  document.body.style.color = "#000"
-  document.querySelector("#result").style.color = "#000"
-} 
-
-function changeColorBlue() {
+  $(".equal")[i].css("backgroundColor", "red")
+  
+  $(document.body).css({
+    "backgroundColor": "#fff",
+    "color": "#000"
+  })
+  $("#result").css("color", "#000")  
+})
+  
+$(".colorTheme")[2].click(function(){
   for (i = 0; i < 11; i++) {
-    document.getElementsByClassName("symbols")[i].style.backgroundColor = "black";
+    $(".symbols")[i].css("backgroundColor", "black")
   }
   for (i = 0; i < 12; i++) {
-    document.getElementsByClassName("black")[i].style.backgroundColor = "gold";
+    $('.black')[i].css("backgroundColor", "gold")
   }
-  document.getElementsByClassName("equal")[0].style.backgroundColor = "blue";
-  document.body.style.backgroundColor = 'cornflowerblue';
-  document.body.style.color = "#fff"
-  document.querySelector("#result").style.color = "#fff"
-} 
-
-function changeColorRed() {
-  for (i = 0; i < 11; i++) {
-    document.getElementsByClassName("symbols")[i].style.backgroundColor = "orange";
-  }
-  for (i = 0; i < 12; i++) {
-    document.getElementsByClassName("black")[i].style.backgroundColor = "khaki";
-  }
-  document.getElementsByClassName("equal")[0].style.backgroundColor = "red";
-  document.body.style.backgroundColor = 'darkorange';
-  document.body.style.color = "#fff"
-  document.querySelector("#result").style.color = "#fff"
-} 
+  $(".equal:first").css("backgroundColor", "blue")
+  $(document.body).css({
+    "backgroundColor": "cornflowerblue",
+     "color": "#fff"
+    })
+    $("#result").css("color", "#fff")
+  })
+  
+  $(".colorTheme")[3].click(function(){
+    
+    for (i = 0; i < 11; i++) {
+      $(".symbols")[i].css("backgroundColor", "orange")
+    }
+    for (i = 0; i < 12; i++) {
+      $(".black")[i].css("backgroundColor", "khaki")
+    }
+    $(".equal:first").css("backgroundColor", "red")
+    $(document.body).css({
+      "backgroundColor": "darkorange",
+       "color": "#fff"
+      })
+  $("#result").css("color", "#fff")
+})
