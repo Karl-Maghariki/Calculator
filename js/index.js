@@ -1,6 +1,6 @@
 // Variables
 let currentValue = "0" 
-let historyValue = undefined;
+let historyValue = undefined
 
 // Initialisation
 displayCurrentValue()
@@ -26,7 +26,7 @@ function clearAll() {
 
 function eraseOne() {
   const len = currentValue.length
-  if(len === 1) {
+  if (len === 1) {
     currentValue = "0"
   } else {
     currentValue = currentValue.substr(0, len - 1) 
@@ -84,64 +84,48 @@ function displayCurrentValue() {
   $("#result").text(currentValue)
 }
 
-$(".colorTheme:first").click(function(){
-  for (i = 0; i < 11;i++) {
-    $('.symbols')[i].css('backgroundColor', "#131313")
+document.getElementsByClassName("colorTheme")[0].addEventListener("click", function(){
+  for (let i = 0; i < 11; i++) {
+    document.getElementsByClassName("symbols")[i].style.backgroundColor= "#131313"
   }
   for (i = 0; i < 12; i++) {
-    $(".black")[i].css("backgroundColor", "#060606")
+    document.getElementsByClassName("black")[i].style.backgroundColor = "#060606"
   }
-  $(".equal:first").css('backgroundColor', '#6f1921')
-  $(document.body).css({
-    "backgroundColor": "#1f1f1f",
-     "color": "#fff"
-    })
-  $("#result").css("color", "#fff")
+  document.getElementsByClassName("equal")[0].style.backgroundColor = "#6f1921"
+  document.body.style.cssText = "background-color: #1f1f1f; color: #fff"
+  document.getElementById("result").style.color = "#fff"
 })
-  
-$(".colorTheme")[1].click(function(){
-  for (i = 0; i < 11;i++) {
-    $(".symbols")[i].css("backgroundColor", "dimgrey")
+
+document.getElementsByClassName("colorTheme")[1].addEventListener("click", function(){
+  for (let i = 0; i < 11; i++) {
+    document.getElementsByClassName("symbols")[i].style.backgroundColor= "dimgrey"
   }
   for (i = 0; i < 12; i++) {
-    $(".black")[i].css("backgroundColor", "gray")
+    document.getElementsByClassName("black")[i].style.backgroundColor = "grey"
   }
-  $(".equal")[i].css("backgroundColor", "red")
-  
-  $(document.body).css({
-    "backgroundColor": "#fff",
-    "color": "#000"
-  })
-  $("#result").css("color", "#000")  
+  document.getElementsByClassName("equal")[0].style.backgroundColor = "red"
+  document.body.style.cssText = "background-color: #fff; color: #000"
+  document.getElementById("result").style.color = "#000"
 })
-  
-$(".colorTheme")[2].click(function(){
-  for (i = 0; i < 11; i++) {
-    $(".symbols")[i].css("backgroundColor", "black")
+document.getElementsByClassName("colorTheme")[2].addEventListener("click", function(){
+  for (let i = 0; i < 11; i++) {
+    document.getElementsByClassName("symbols")[i].style.backgroundColor= "black"
   }
   for (i = 0; i < 12; i++) {
-    $('.black')[i].css("backgroundColor", "gold")
+    document.getElementsByClassName("black")[i].style.backgroundColor = "gold"
   }
-  $(".equal:first").css("backgroundColor", "blue")
-  $(document.body).css({
-    "backgroundColor": "cornflowerblue",
-     "color": "#fff"
-    })
-    $("#result").css("color", "#fff")
-  })
-  
-  $(".colorTheme")[3].click(function(){
-    
-    for (i = 0; i < 11; i++) {
-      $(".symbols")[i].css("backgroundColor", "orange")
-    }
-    for (i = 0; i < 12; i++) {
-      $(".black")[i].css("backgroundColor", "khaki")
-    }
-    $(".equal:first").css("backgroundColor", "red")
-    $(document.body).css({
-      "backgroundColor": "darkorange",
-       "color": "#fff"
-      })
-  $("#result").css("color", "#fff")
+  document.getElementsByClassName("equal")[0].style.backgroundColor = "blue"
+  document.body.style.cssText = "background-color: cornflowerblue; color: #fff"
+  document.getElementById("result").style.color = "#fff"
+})
+document.getElementsByClassName("colorTheme")[3].addEventListener("click", function(){
+  for (let i = 0; i < 11; i++) {
+    document.getElementsByClassName("symbols")[i].style.backgroundColor= "orange"
+  }
+  for (i = 0; i < 12; i++) {
+    document.getElementsByClassName("black")[i].style.backgroundColor = "khaki"
+  }
+  document.getElementsByClassName("equal")[0].style.backgroundColor = "red"
+  document.body.style.cssText = "background-color: darkorange; color: #fff"
+  document.getElementById("result").style.color = "#fff"
 })
