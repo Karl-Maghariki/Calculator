@@ -34,47 +34,41 @@ function eraseOne() {
   displayCurrentValue()
 }   
 
-function add() {
+$("#add").click(function(){
   historyValue = currentValue + " + ";
   displayHistoryValue()
   currentValue = "0";
   concatRight()
   displayHistoryValue()
-}
-// when - Pressed, The Number is Substracted From The Other Number
-function minus() {
+})
+$("#minus").click(function(){
   historyValue = currentValue + " - ";
   displayHistoryValue()
   currentValue = "0";
   concatRight()
   displayHistoryValue()
-}
+})
 
-// when × Pressed, The Number is Multipilied By The Other Number
-function multiply() {
+$("#multiply").click(function(){
   historyValue = currentValue + " * ";
   displayHistoryValue()
   currentValue = "0";
   concatRight()
   displayHistoryValue()
-}
-
-// when ÷ Pressed, The Number is Divided By The Other Number
-function divide() {
+})
+$("#divide").click(function(){
   historyValue = currentValue + " / ";
   displayHistoryValue()
   currentValue = "0";
   concatRight()
   displayHistoryValue()
-}
-
-//this Function Displays The Result
-function final() {
+})
+$("#final").click(function(){
   historyValue += currentValue
   displayHistoryValue()
   currentValue = eval(historyValue)
   displayCurrentValue()
-}
+})
 
 function displayHistoryValue() {
   $("#history").text(historyValue)
